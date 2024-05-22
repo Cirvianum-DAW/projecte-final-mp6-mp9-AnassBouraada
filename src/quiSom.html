@@ -32,11 +32,10 @@
     <div style="background-image: url('../Imatges/Fonsformulari.png'); background-size: cover;" class="md:flex-1 p-4 flex flex-col justify-center items-center">
       <form class="Login max-w-md mx-auto bg-white p-8 rounded-md shadow-md w-full md:w-2/3 lg:w-1/2" id="login-form">
         <h5 class="text-2xl mb-4 text-center text-blue-500">Formulari Login</h5>
-        <input type="text" name="Usuari" placeholder="Usuari" class="Caracters mb-2 p-2 w-full border border-gray-300 rounded-md" required />
-        <input type="password" name="Contraseña" placeholder="Contraseña" class="Caracters mb-2 p-2 w-full border border-gray-300 rounded-md" required />
+        <input type="text" name="username" placeholder="username" class="Caracters mb-2 p-2 w-full border border-gray-300 rounded-md" required />
+        <input type="password" name="password" placeholder="password" class="Caracters mb-2 p-2 w-full border border-gray-300 rounded-md" required />
         <!-- Canvi del type del botó a submit -->
-        <button type="button" class="Boto bg-blue-500 text-white p-2 rounded-md cursor-pointer w-full" onclick="handleLogin()">Accedeix</button>
-        <p class="mt-2 text-center">
+        <button id="login-button" type="submit" class="Boto bg-blue-500 text-white p-2 rounded-md cursor-pointer w-full">Accedeix</button>        <p class="mt-2 text-center">
           <a href="#" class="text-blue-500">Has oblidat la teva contrasenya?</a>
         </p>
       </form>

@@ -1,32 +1,32 @@
-// Importar les funcions necessàries des de fetchAPI.js i auth.js
-import { fetchAPI } from '../services/fetchAPI.js';
-import { authenticateUser } from '../services/auth.js';
+import { login } from '../services/auth.js';
 
-// Funció per gestionar el login
-export function handleLogin(event) {
-  event.preventDefault(); // Evita el comportament per defecte de l'enviament del formulari
+export function renderLoginPage() {
+  console.log('renderLoginPage function called');
+  const form = document.querySelector('#login-form');
 
-  const username = document.querySelector('input[name="Usuari"]').value;
-  const password = document.querySelector('input[name="Contraseña"]').value;
+  if (!form) {
+    console.error('Login form not found');
+    return;
+  }
 
-  // Validar les credencials amb la funció d'autenticació
-  authenticateUser(username, password)
-    .then(response => {
-      if (response.success) {
-        // Redirigir a una pàgina d'èxit o mostrar un missatge d'èxit
-        alert('Login correcte!');
-        // Redirigir a la pàgina principal o a una pàgina protegida
-        window.location.href = 'index.html';
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const username = form.username.value;
+    const password = form.password.value;
+
+    try {
+      console.log('Form submitted');
+      const user = await login(username, password);
+
+      if (user.isAdmin) {
+        window.location.href = '/admin.html';
       } else {
-        // Mostrar un missatge d'error
-        alert('Credencials incorrectes. Torna-ho a intentar.');
+        window.location.href = '/index.html';
       }
-    })
-    .catch(error => {
-      console.error('Error durant el procés de login:', error);
-      alert('S\'ha produït un error. Torna-ho a intentar més tard.');
-    });
+    } catch (error) {
+      errorMessage.style.display = 'block';
+      console.error(error);
+    }
+  });
 }
-
-// Associar la funció handleLogin() amb l'event "submit" del formulari
-document.getElementById('login-form').addEventListener('submit', handleLogin);
