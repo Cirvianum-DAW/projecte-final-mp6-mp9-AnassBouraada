@@ -1,0 +1,128 @@
+{
+  "uuid": "6b4f6004-c534-480e-b0af-930a5433f94d",
+  "lastMigration": 32,
+  "name": "GoldGymApi",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "407f327c-c467-4892-82b3-8452c0a52f21",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "users",
+      "responses": [
+        {
+          "uuid": "3aca0cae-a33d-4a05-8ac4-e3dee09076bc",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "smcd",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "ed6c30f9-7712-45cc-b8a6-36df9830aac6",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "activites",
+      "responses": [
+        {
+          "uuid": "90ab9569-7885-4910-9dbd-0d0c65fda91c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "96lf",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "407f327c-c467-4892-82b3-8452c0a52f21"
+    },
+    {
+      "type": "route",
+      "uuid": "ed6c30f9-7712-45cc-b8a6-36df9830aac6"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "96f77c63-d01a-48d1-9605-d1ef0bfacb26",
+      "id": "smcd",
+      "name": "Users",
+      "documentation": "",
+      "value": "[\n  {\n    \"id\": 1,\n    \"username\": \"anass\",\n    \"email\": \"johndoe@example.com\",\n    \"phone\": \"123-456-7890\",\n    \"address\": \"123 Main St, Springfield, IL 62704\",\n    \"birthdate\": \"31/12/2004\",\n    \"isActive\": true,\n    \"registration\": [1, 3, 5, 7, 9],\n    \"password\": \"a\"\n  },\n  {\n    \"id\": 2,\n    \"username\": \"janedoe\",\n    \"email\": \"janedoe@example.com\",\n    \"phone\": \"987-654-3210\",\n    \"address\": \"456 Oak St, Springfield, IL 62704\",\n    \"birthdate\": \"31/12/2004\",\n    \"isActive\": true,\n    \"registration\": [2, 4, 6, 8],\n    \"password\": \"a\"\n  },\n  {\n    \"id\": 3,\n    \"username\": \"alicesmith\",\n    \"email\": \"alicesmith@example.com\",\n    \"phone\": \"555-555-5555\",\n    \"address\": \"789 Pine St, Springfield, IL 62704\",\n    \"birthdate\": \"31/12/2004\",\n    \"isActive\": true,\n    \"registration\": [1, 2, 3, 4, 5],\n    \"password\": \"a\"\n  },\n  {\n    \"id\": 4,\n    \"username\": \"bobjohnson\",\n    \"email\": \"bjohnson@example.com\",\n    \"phone\": \"111-222-3333\",\n    \"address\": \"987 Elm St, Springfield, IL 62704\",\n    \"birthdate\": \"31/12/2004\",\n    \"isActive\": true,\n    \"registration\": [3, 4, 5, 7, 9],\n    \"password\": \"a\"\n  },\n  {\n    \"id\": 5,\n    \"username\": \"emilybrown\",\n    \"email\": \"ebrown@example.com\",\n    \"phone\": \"999-888-7777\",\n    \"address\": \"654 Maple St, Springfield, IL 62704\",\n    \"birthdate\": \"31/12/2004\",\n    \"isActive\": true,\n    \"registration\": [1, 5, 6, 8, 10],\n    \"password\": \"a\"\n  }\n]\n"
+    },
+    {
+      "uuid": "5290041e-e5b8-4783-ad7a-cccde0ba5b0c",
+      "id": "96lf",
+      "name": "Activites",
+      "documentation": "",
+      "value": "[\n  {\n    \"id\": 1,\n    \"name\": \"Natació\",\n    \"duration\": 60,\n    \"type\": \"acuàtica\",\n    \"isIndividual\": true\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Aquagym\",\n    \"duration\": 45,\n    \"type\": \"acuàtica\",\n    \"isIndividual\": false\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Boxa\",\n    \"duration\": 60,\n    \"type\": \"gym\",\n    \"isIndividual\": true\n  },\n  {\n    \"id\": 4,\n    \"name\": \"Tai Chi\",\n    \"duration\": 90,\n    \"type\": \"gym\",\n    \"isIndividual\": false\n  },\n  {\n    \"id\": 5,\n    \"name\": \"Pilates Mat\",\n    \"duration\": 60,\n    \"type\": \"gym\",\n    \"isIndividual\": true\n  },\n  {\n    \"id\": 6,\n    \"name\": \"Aeròbic\",\n    \"duration\": 60,\n    \"type\": \"gym\",\n    \"isIndividual\": false\n  },\n  {\n    \"id\": 7,\n    \"name\": \"Kickboxing\",\n    \"duration\": 60,\n    \"type\": \"gym\",\n    \"isIndividual\": true\n  },\n  {\n    \"id\": 8,\n    \"name\": \"Salsa Dance\",\n    \"duration\": 60,\n    \"type\": \"gym\",\n    \"isIndividual\": false\n  },\n  {\n    \"id\": 9,\n    \"name\": \"Circuit Training\",\n    \"duration\": 60,\n    \"type\": \"gym\",\n    \"isIndividual\": false\n  },\n  {\n    \"id\": 10,\n    \"name\": \"Body Pump\",\n    \"duration\": 60,\n    \"type\": \"gym\",\n    \"isIndividual\": true\n  },\n  {\n    \"id\": 11,\n    \"name\": \"Spinning\",\n    \"duration\": 45,\n    \"type\": \"spinning\",\n    \"isIndividual\": false\n  },\n  {\n    \"id\": 12,\n    \"name\": \"Aquacycling\",\n    \"duration\": 45,\n    \"type\": \"acuàtica\",\n    \"isIndividual\": false\n  },\n  {\n    \"id\": 13,\n    \"name\": \"Disco Spinning\",\n    \"duration\": 60,\n    \"type\": \"spinning\",\n    \"isIndividual\": true\n  }\n]\n"
+    }
+  ],
+  "callbacks": []
+}
