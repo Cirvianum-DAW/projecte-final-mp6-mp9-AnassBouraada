@@ -18,7 +18,7 @@ export function renderLoginPage() {
     try {
       console.log('Form submitted');
       const user = await login(username, password);
-
+      console.log('User logged in:', user);
       if (user.isAdmin) {
         window.location.href = '/admin.html';
       } else {
@@ -30,3 +30,5 @@ export function renderLoginPage() {
     }
   });
 }
+
+renderLoginPage();

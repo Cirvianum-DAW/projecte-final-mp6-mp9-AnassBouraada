@@ -4,6 +4,7 @@ CSS de el sidebar
 
 .Sidebar {
   background: #063146;
+  min-width: 300px;
 }
 .Sidebar header {
   font-size: 22px;
