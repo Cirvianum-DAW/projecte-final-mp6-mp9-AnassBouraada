@@ -1,6 +1,6 @@
 import fetchFromApi from './fetchAPI.js';
 
-async function login(username, password) {
+export async function login(username, password) {
   console.log('Login of user', username);
   // Fetch all users
   const users = await fetchFromApi('users');
@@ -25,15 +25,15 @@ async function login(username, password) {
   throw new Error('Login failed');
 }
 
-function logout() {
+export function logout() {
   // Remove user data from localStorage
   localStorage.removeItem('user');
 }
 
-function isAuthenticated() {
+export function isAuthenticated() {
   console.log('isAuthenticated');
   const user = JSON.parse(localStorage.getItem('user'));
   return user && user.isLoggedIn === true;
 }
 
-export { login, logout, isAuthenticated };
+

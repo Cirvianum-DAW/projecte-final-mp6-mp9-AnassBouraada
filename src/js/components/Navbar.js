@@ -1,6 +1,5 @@
 import { isAuthenticated } from "../services/auth";
 
-// import { isAuthenticated } from '../services/auth.js';
 export function renderNavbar() {
 
     const button = document.getElementById('classes');
@@ -14,5 +13,3 @@ export function renderNavbar() {
     }
   
   }
-  
-  renderNavbar();
